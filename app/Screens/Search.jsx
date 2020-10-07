@@ -7,7 +7,7 @@ import colors from "../config/colors";
 //Formik & Yup for handling the search form data
 import { Formik } from "formik";
 import * as Yup from "yup";
-
+import { AdMobBanner } from "expo-ads-admob";
 //Search Input Validation Schema using "Yup"
 const SearchValidationSchema = Yup.object().shape({
   search: Yup.string().required("Please enter the city name"),
@@ -17,6 +17,7 @@ const Search = ({ navigation }) => {
   return (
     <Screen style={styles.screen}>
       {/*Handle the form data (change value , submit , blur ) using Formik */}
+
       <Formik
         initialValues={{
           search: "",
@@ -41,6 +42,10 @@ const Search = ({ navigation }) => {
           </View>
         )}
       </Formik>
+      <AdMobBanner
+        bannerSize="smartBannerLandscape"
+        adUnitID="ca-app-pub-4876867144671888/4528833023"
+      />
     </Screen>
   );
 };
@@ -50,6 +55,7 @@ export default Search;
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.lightGray,
+    flex: 1,
   },
   searchContainer: {
     padding: 15,
@@ -58,5 +64,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontFamily: "WorkSans-Medium",
     color: colors.danger,
+  },
+  form: {
+    flex: 1,
   },
 });

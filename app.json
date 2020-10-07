@@ -35,6 +35,11 @@
         "wasm",
         "svg"
       ]
+    },
+    "android": {
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4876867144671888~3407323047"
+      }
     }
   }
 }

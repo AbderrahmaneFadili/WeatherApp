@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 100,
     color: colors.darkGray,
     flexDirection: "row",
-    marginTop: -40,
+    marginTop: -50,
   },
   temperatureContainer: {
     marginTop: 10,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   weatherUnit: {
     fontSize: 60,
     fontFamily: "WorkSans-ExtraLight",
-    top: -20,
+    top: -30,
     color: colors.darkGray,
   },
 });

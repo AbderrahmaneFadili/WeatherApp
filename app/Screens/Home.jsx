@@ -12,6 +12,8 @@ import moment from "moment";
 import { MaterialIcons } from "@expo/vector-icons";
 import WeatherButton from "../components/WeatherButton";
 import WeatherInfo from "../components/WeatherInfo";
+//ads
+import { AdMobBanner } from "expo-ads-admob";
 
 //initial State
 const initialState = {
@@ -172,6 +174,10 @@ const Home = ({ navigation, route }) => {
           />
         </View>
       )}
+      <AdMobBanner
+        bannerSize="smartBannerLandscape"
+        adUnitID="ca-app-pub-4876867144671888/4832085350"
+      />
     </Screen>
   );
 };
